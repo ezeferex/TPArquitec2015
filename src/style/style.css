@@ -1,5 +1,15 @@
 @import url('http://fonts.googleapis.com/css?family=Roboto');
 
-h1{
+h3{
 	font-family: 'Roboto';
+}
+.md-toolbar-tools{
+	background-color: #42A5F5;
+}
+
+
+.md-toolbar-tools h1 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: inherit;
 }
