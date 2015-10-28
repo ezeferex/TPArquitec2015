@@ -1,7 +1,49 @@
-.fabToolbardemoBasicUsage md-fab-toolbar.md-right md-fab-trigger.align-with-text {
-  left: 7px; }
-
-
-  .md-toolbar-tools{
-  	background-color: #3F51B5;
+/*{
+	box-sizing:border-box;
+}*/
+#md-toolbar{
+  	background-color: #00897B;
   }
+
+
+ #content{
+ 	text-align: center;
+ 	overflow: hidden;
+ }
+
+#content md-card{
+	width:48%;
+	max-width: 100%;
+	height:auto;
+	//float:left;
+	display: inline-block;
+	text-align: left;
+}
+
+md-card-content{
+	display: block;
+}
+
+@media screen and (max-width: 915px){
+	#content md-card{
+		width:46.7%;
+	}
+}
+
+@media screen and (max-width: 565px){
+	#content md-card{
+		width:95%;
+		margin: 10px auto;
+		float:none;
+	}
+}
+
+
+
+/*#content md-card{
+	transition: all 0.5s linear;
+}
+
+#content md-card:hover{
+	transform:scale(1.03);
+}*/

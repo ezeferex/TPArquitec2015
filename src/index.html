@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <title>Programa de beneficios Universidad CAECE</title>
   <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'/>
   <link rel="stylesheet" href="./bower_components/angular-material/angular-material.min.css"/>
@@ -10,31 +11,117 @@
 
 </head>
 <body ng-controller="AppCtrl">
-  <md-toolbar>
+  <md-toolbar id="md-toolbar">
     <md-button class="md-fab" ng-click="toogleSideNav('left')">
-        <md-icon md-svg-src="./img/icons/ic_menu_48px.svg">
-    </md-button>
-    <h3>Programa de beneficios Universidad CAECE</h3>
+        <md-icon md-svg-src="./img/icons/ic_menu_48px.svg"></md-icon>
+    </md-button><h3>Programa de beneficios Universidad CAECE</h3>
   </md-toolbar>
 
   <div>
         <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" >
-          
+          <div>
+            <img src="./img/logo.png" id="logo">
+          </div>
+          <md-content layout="column">
+              <md-button class="md-raised"> <md-icon md-svg-src="./img/icons/ic_arrow_forward_36px.svg"></md-icon>Item 1</md-button>
+              <md-button class="md-raised"><md-icon md-svg-src="./img/icons/ic_arrow_forward_36px.svg"></md-icon>Item 2</md-button>
+              <md-button class="md-raised"><md-icon md-svg-src="./img/icons/ic_arrow_forward_36px.svg"></md-icon>Item 3</md-button>
+              <md-button class="md-raised"><md-icon md-svg-src="./img/icons/ic_arrow_forward_36px.svg"></md-icon>Item 4</md-button>
+              <!--<md-list>
+                  <md-item>
+                    <a>
+                      <md-item-content md-ink-ripple layout="row" layout-align="start center">
+                        <div class="inset">
+                           <md-icon md-svg-src="./img/icons/ic_arrow_forward_36px.svg"></md-icon>
+                           <md-tooltip   md-direction="right">"Hola"</md-tooltip>
+                        </div>
+
+                      </md-item-content>
+                       <md-divider></md-divider>
+                    </a>
+                  </md-item>
+                  <md-divider></md-divider>
+
+                  <md-item>
+                    <a>
+                      <md-item-content md-ink-ripple layout="row" layout-align="start center">
+                        <div class="inset">
+                          <md-icon md-svg-src="./img/icons/ic_arrow_forward_36px.svg"></md-icon>
+                           <md-tooltip   md-direction="right">"Chau"</md-tooltip>
+                        </div>
+
+                      </md-item-content>
+                    </a>
+                  </md-item>
+              </md-list>-->
+          </md-content>
         </md-sidenav>
           
+        <div layout="row" layout-padding class="bg-dark-blue nav-dark" layout-align="space-between center">
+          <div>
+            <md-button>Home</md-button>
+            <md-button>Comercios Adheridos</md-button>
+            <!--<md-button>Item 2</md-button>-->
+          </div>
+          <div class="nav-buttons">
+              <md-button class="md-raised md-accent">Identificarse</md-button>
+              <md-button class="md-raised md-warn">Pedir Adhesión</md-button>
+          </div>
+        </div>    
       <md-content id="content">
+        <md-card>
+          <img ng-src="./img/HavannaCard.jpg" class="md-card-image" alt="Washed Out">
+            <md-card-content>
+              <h2 class="md-title">Paracosm</h2>
+                  <p>
+                    The titles of Washed Out's breakthrough song and the first single from Paracosm share the two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
+                  </p>
+            </md-card-content>
+        </md-card>
+                <md-card>
+                  <img ng-src="./img/SheratonCard.jpg" class="md-card-image" alt="Washed Out">
+                  <md-card-content>
+                    <h2 class="md-title">Paracosm</h2>
+                    <p>
+                    The titles of Washed Out's breakthrough song and the first single from Paracosm share the two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
+                    </p>
+                  </md-card-content>
+                </md-card>
+
+                <md-card>
+                  <img ng-src="./img/SamsaraCard.jpg" class="md-card-image" alt="Washed Out">
+                  <md-card-content>
+                    <h2 class="md-title">Paracosm</h2>
+                    <p>
+                    The titles of Washed Out's breakthrough song and the first single from Paracosm share the two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
+                    </p>
+                  </md-card-content>
+                </md-card>
+
+
+                <md-card>
+                  <img ng-src="./img/PrestigioCard.jpg" class="md-card-image" alt="Washed Out">
+                  <md-card-content>
+                    <h2 class="md-title">Paracosm</h2>
+                    <p>
+                    The titles of Washed Out's breakthrough song and the first single from Paracosm share the two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
+                  </p>
+                  </md-card-content>
+                </md-card>
       </md-content>
   </div>
-  <div layout="row" layout-padding class="bg-dark-blue nav-dark" layout-align="space-between center">
-<div>
-    <md-button>Home</md-button>
-    <md-button>Item 1</md-button>
-    <md-button>Item 2</md-button>
-</div>
-  <div class="nav-buttons">
-      <md-button class="md-raised md-accent">My profile</md-button>
-      <md-button class="md-raised md-warn">Log Out</md-button>
-  </div>
+
+  <md-content id="footer" layout="row">
+    <div>
+      <img ng-src="./img/logo.png" alt="">
+    </div>
+    <md-content>
+      <p>Universidad CAECE</p>
+      <p>Reconocimiento definitivo por Reslucion Ministerial Nro. 1.295 del 10 de agosto e 1987.</p>
+      <p>Olavarría 2464 - B7600ELH - Mar del Plata - Argentina - Tel. +54 0223 499-3400</p>
+    </md-content>
+  </md-content>
+
 
   <script src="./bower_components/angular/angular.min.js"></script>
   <script src="./bower_components/angular-animate/angular-animate.min.js"></script>
