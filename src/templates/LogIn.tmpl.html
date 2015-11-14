@@ -1,0 +1,41 @@
+<md-dialog aria-label="Log In" ng-cloak>
+  <form>
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h2>Log In</h2>
+      <span flex></span>
+      <md-button class="md-icon-button" ng-click="cancel()">
+        <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+      </md-button>
+    </div>
+  </md-toolbar>
+  <md-dialog-content style="max-width:800px;max-height:810px;">
+    <div class="md-dialog-content">
+      <form action="LogIn_submit" method="get" accept-charset="utf-8">
+        <div layout-padding> <!--layout layout-sm="column"-->
+          <md-input-container>
+            <label>Mail</label>
+            <input type="text" ng-model="user.mail">
+          </md-input-container>
+          <md-input-container>
+            <label>Password</label>
+            <input type="password" ng-model="user.pass">
+          </md-input-container>
+        </div>
+      </form>
+    </div>
+  </md-dialog-content>
+  <div class="md-actions" layout="row">
+    <md-button href="http://en.wikipedia.org/wiki/Mango" target="_blank" md-autofocus>
+      ¿Olvidaste tu contraseña?
+    </md-button>
+    <span flex></span>
+    <md-button> <!--ng-click="answer('not useful')" -->
+    Log In
+    </md-button>
+    <!--<md-button style="margin-right:20px;" ng-click="cancel()">ng-click="answer('useful')" 
+      Cancelar
+    </md-button>-->
+  </div>
+  </form>
+</md-dialog>
