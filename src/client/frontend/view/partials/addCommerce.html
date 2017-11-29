@@ -1,0 +1,42 @@
+<md-content layout-padding layout-wrap>
+<form ng-controller="formController" enctype="multipart/form-data"><!--ng-submit="newCommerce(commerce)">-->
+		<md-input-container>
+			<label>Nombre del comercio</label>
+			<input required name="commerceName" ng-model="commerce.name">
+			<div ng-messages="formCommerce.commerceName.$error">
+                <div ng-message="required">Este campo es requerido.</div>
+            </div>
+		</md-input-container>
+		<md-input-container>
+			<label>Dirección</label>
+						<input required name="commercAddress" ng-model="commerce.address">
+			<div ng-messages="formCommerce.commercAddress.$error">
+                <div ng-message="required">Este campo es requerido.</div>
+            </div>
+		</md-input-container>
+		<md-input-container>
+			<label>Telefono</label>
+						<input required name="commercePhone" ng-model="commerce.phone">
+			<div ng-messages="formCommerce.commercePhone.$error">
+                <div ng-message="required">Este campo es requerido.</div>
+            </div>
+		</md-input-container>
+
+		<md-input-container>
+			<label>Descipcion</label>
+						<input required name="commerceDescrip" ng-model="commerce.descrip">
+			<div ng-messages="formCommerce.commerceDescrip.$error">
+                <div ng-message="required">Este campo es requerido.</div>
+            </div>
+		</md-input-container>
+
+		 <input type="file" ngf-select ng-model="picFile" name="file"    
+             accept="image/*" ngf-max-size="2MB" required>
+      	<i ng-show="myForm.file.$error.required">Este campo es requerido.</i><br>
+      	<img ng-show="myForm.file.$valid" ngf-thumbnail="picFile" class="thumb"> <md-button ng-click="picFile = null" ng-show="picFile">Remove</md-button>
+
+      <md-button type="submit" ng-click="newCommerce(commerce,picFile)"><!--ng-click="newCommerce(commerce)">-->
+      Agregar comercio
+      </md-button>
+</form>
+</md-content>

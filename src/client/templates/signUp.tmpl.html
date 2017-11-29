@@ -1,0 +1,73 @@
+<md-dialog aria-label="Sign Up" ng-cloak>
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h2>Pedir Adhesión</h2>
+      <span flex></span>
+      <md-button class="md-icon-button" ng-click="cancel()">
+        <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+      </md-button>
+    </div>
+  </md-toolbar>
+  
+  <md-dialog-content>
+    <div class="md-dialog-content">
+      <form name="projectForm" ng-controller="formController" ng-submit="signUp(project)">
+        <div layout-padding>
+          <md-content layout="column">
+            <md-input-container>
+              <label >Nombre</label>
+              <input required name="clientName" ng-model="project.clientName">
+              <div ng-messages="projectForm.clientName.$error">
+                <div ng-message="required">Este campo es requerido.</div>
+              </div>
+            </md-input-container>
+          <md-input-container>
+            <label>Apellido</label>
+            <input required name="clientSurname" ng-model="project.clientSurname">
+            <div ng-messages="projectForm.clientSurname.$error">
+              <div ng-message="required">Este campo es requerido.</div>
+            </div>
+          </md-input-container>
+          <md-input-container>
+            <label>Mail</label>
+            <input required type="email" name="clientMail" ng-model="project.clientMail" minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/">
+            <div ng-messages="projectForm.clientMail.$error">
+              <div ng-message="required">Este campo es requerido.</div>
+            </div>
+          </md-input-container>
+          <md-input-container>
+            <label>Matricula</label>
+            <input required name="clientMatric" ng-model="project.clientMatric">
+            <div ng-messages="projectForm.clientMatric.$error">
+              <div ng-message="required">Este campo es requerido.</div>
+            </div>
+          </md-input-container>
+          <md-input-container>
+            <label>DNI</label>
+            <input required name="clientDNI" ng-model="project.clientDNI">
+            <div ng-messages="projectForm.clientDNI.$error">
+              <div ng-message="required">Este campo es requerido.</div>
+            </div>
+          </md-input-container>
+          <md-datepicker ng-model="birthday" md-placeholder="Fecha de Nacimiento"></md-datepicker>
+
+          <md-input-container>
+            <label>Seleccione una foto de perfil</label>
+            <input type="text" ng-model="project.photo">
+          </md-input-container>
+          
+        </div>
+          <div class="md-actions" layout="row">
+            <md-button ng-disabled="formSignUp.$invalid">
+              Enviar
+            </md-button>
+          </div>
+      </form>
+    </div>
+  </md-dialog-content>
+</md-dialog>
+
+
+            <!--<md-button style="margin-right:20px;" ng-click="cancel()">ng-click="answer('useful')" 
+              Cancelar
+            </md-button>-->

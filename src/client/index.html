@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="app">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title>Programa de beneficios Universidad CAECE</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'/>
+  <link rel="stylesheet" href="/bower_components/angular-material/angular-material.min.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+
+</head>
+<body ng-controller="AppController" ng-init="getCommerceList()">
+
+  <!--Begin Header-->
+  <md-toolbar id="md-toolbar" layout="row">
+    <md-button ng-show="userType=='Admin'" class="md-fab" ng-click="toogleSideNav('left')">
+        <md-icon md-svg-src="./img/icons/ic_menu_48px.svg"></md-icon>
+    </md-button>
+    <h3>Programa de beneficios Universidad CAECE</h3>
+    <img class="logo-toolbar"src="img/logo3.png">
+  </md-toolbar>
+  <!--End Header-->
+
+
+  
+  <div id="toolbar-content">
+        <!--Begin SideNav-->
+        <div>
+          <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" >
+          <img src="./img/logo.png" class="logo"> <!--ng-show-->
+          <md-content layout="column">
+              <md-button class="md-raised" ui-sref="addCommerce"> <md-icon md-svg-src="/img/icons/ic_arrow_forward_36px.svg"></md-icon>Comercios</md-button>
+              <md-button class="md-raised"><md-icon md-svg-src="/img/icons/ic_arrow_forward_36px.svg"></md-icon>Usuarios</md-button>
+              <md-button class="md-raised"><md-icon md-svg-src="/img/icons/ic_arrow_forward_36px.svg"></md-icon>Comprobantes</md-button>
+              <md-button class="md-raised"><md-icon md-svg-src="/img/icons/ic_arrow_forward_36px.svg"></md-icon>Denuncias</md-button>
+              <md-button class="md-raised"><md-icon md-svg-src="/img/icons/ic_arrow_forward_36px.svg"></md-icon>Liquidaciones</md-button>
+              <md-button class="md-raised" ui-sref="home"><md-icon md-svg-src="/img/icons/ic_arrow_forward_36px.svg"></md-icon>Cerrar Sesion</md-button>
+          </md-content>
+        </md-sidenav>
+        </div>
+        <!--End SideNav-->
+        
+        <!--Begin ToolBar-->
+        <div layout="row" layout-padding class="bg-dark-blue nav-dark" layout-align="space-between center" id="option-toolbar" ng-hide="userType=='Admin'">
+          <div>
+            <md-button ui-sref="home">Home</md-button>
+            <md-button ui-sref="showCommerce">Comercios Adheridos</md-button>
+            <!--<md-button>Item 2</md-button>-->
+          </div>
+          <div ng-controller="dialogController" class="nav-buttons" ng-cloak>
+              <md-button class="md-primary md-raised" ng-click="logIn($event)" flex-sm="100" flex-md="100" flex-gt-md="auto">Identificarse</md-button>
+              <md-button class="md-raised md-warn" ng-click="signUp($event)">Pedir Adhesión</md-button>
+          </div>
+        </div>
+        <!--End ToolBar-->
+        
+
+        <!--Begin Content-->
+        <div ui-view>
+
+      </div>
+      <!--End Content-->
+
+
+  </div>
+
+  <!--Begin Footer-->
+  <md-content id="footer" layout="row">
+
+      <img src="./img/logo.png" class="logo">
+
+    <md-content>
+      <p>Universidad CAECE</p>
+      <p>Reconocimiento definitivo por Reslucion Ministerial Nro. 1.295 del 10 de agosto de 1987.</p>
+      <p>Olavarría 2464 - B7600ELH - Mar del Plata - Argentina - Tel. +54 0223 499-3400</p>
+    </md-content>
+  </md-content>
+  <!--End Footer-->
+
+
+  <!--Begin Scripts-->
+  <script src="/bower_components/angular/angular.min.js"></script>
+  <script src="/bower_components/angular-animate/angular-animate.min.js"></script>
+  <script src="/bower_components/angular-aria/angular-aria.min.js"></script>
+  <script src="/bower_components/angular-material/angular-material.min.js"></script>
+  <script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <script src="/bower_components/angular-messages/angular-messages.min.js"></script>
+  <script src="/bower_components/ng-file-upload/ng-file-upload.min.js"></script>"
+  <script src="/frontend/app/app.js"></script>
+  <script src="/frontend/user/users.services.js"></script>
+  <script src="/frontend/view/frontend.controllers.js"></script>
+  <!--End Scripts-->
+</body>
+</html>
+
+
+
